@@ -102,6 +102,64 @@ nav {
     width: 100%;
 }
 
+/* ------------------------------------------------
+   HAMBURGER BASE STYLE (Desktop Hidden)
+------------------------------------------------ */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #36cef0;
+    transition: 0.3s;
+}
+
+.hamburger:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+/* ------------------------------------------------
+   MOBILE NAVIGATION
+------------------------------------------------ */
+@media (max-width: 768px) {
+
+    /* Show hamburger only on mobile */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide desktop menu */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        background: rgba(10,10,10,0.95);
+        text-align: center;
+        padding: 20px 0;
+        gap: 20px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* When opened */
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        color: white;
+        padding: 10px 0;
+    }
+
+    .nav-content {
+        padding: 0 1rem;
+    }
+}
+
+
 /* ===============================
       HERO SECTION LAYOUT
    =============================== */
@@ -522,9 +580,7 @@ footer {
    =============================== */
 
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
+   
 
     .hero h1 {
         font-size: 2.4rem;
@@ -537,5 +593,126 @@ footer {
     .stats {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+/* ============================================
+   MOBILE RESPONSIVE (MAX-WIDTH: 768px)
+   ============================================ */
+
+@media (max-width: 768px) {
+
+    
+
+    /* Make GK logo center */
+    .logo a {
+        font-size: 1.6rem;
+    }
+
+    /* HERO SECTION */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 6rem;
+        padding: 0 1rem;
+    }
+
+    .hero-content {
+        width: 100%;
+        order: 1;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .hero-content p {
+        font-size: 0.95rem;
+    }
+
+    .cta-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin-top: 1.5rem;
+        order: 0;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+        margin: auto;
+    }
+
+    /* ABOUT SECTION */
+    .about-content {
+        padding: 0 1rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    /* PROJECT GRID */
+    .project-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .project-image img {
+        height: 200px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    /* EXPERIENCE TIMELINE --> STACKED */
+    .timeline::before {
+        display: none; /* remove vertical line */
+    }
+
+    .timeline-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+
+    .timeline-dot {
+        left: 20px;
+        transform: translateX(0);
+    }
+
+    /* CONTACT */
+    .contact-content {
+        padding: 0 1rem;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    footer {
+        font-size: 0.9rem;
+        padding: 1.5rem;
     }
 }

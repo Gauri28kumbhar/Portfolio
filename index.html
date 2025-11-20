@@ -14,15 +14,20 @@
 <body>
 
     <!-- Navigation -->
-    <nav>
-        <div class="nav-content">
-            <div class="logo">
-                <a href="#">GK</a>
-            </div>
-                   
-        <ul class="nav-links" style="display:flex; gap:25px; list-style:none;">
+ <nav>
+    <div class="nav-content">
+        <div class="logo">
+            <a href="#">GK</a>
+        </div>
 
-    <li>
+        <!-- Hamburger (Mobile Only) -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Navigation Menu -->
+        <ul class="nav-links" id="navMenu">
+            <li>
         <a href="#home" 
            style="padding:8px 16px; border-radius:20px; transition:0.3s; text-decoration:none; color:white;"
            onmouseover="this.style.background='#36cef0'; this.style.color='#000';"
@@ -76,10 +81,11 @@
         </a>
     </li>
 
-</ul>
+        </ul>
+    </div>
+</nav>
 
-        </div>
-    </nav>
+
 
     <!-- Hero Section -->
 <section id="home" class="hero">

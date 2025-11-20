@@ -56,3 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach(el => observer.observe(el));
 
 });
+
+// Hamburger
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show");
+}
+
